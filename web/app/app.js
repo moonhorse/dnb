@@ -62,7 +62,15 @@ $(function() {
 
   // Views
   window.GameView = Backbone.View.extend({
-    el: '#game'
+    el: '#game',
+    tagName: 'div',
+
+    template: _.template('game'),
+
+    render: function() {
+      $(this.el).html(this.template());
+      return this;
+    }
   });
 
   window.HistoryView = Backbone.View.extend({
@@ -127,6 +135,7 @@ $(function() {
       this.friendsView = new FriendsView();
 
       this.menuView.render();
+      this.gameView.render();
 
       // Init the Routes
       var dnbRouter = new DnbRouter({app: this});
