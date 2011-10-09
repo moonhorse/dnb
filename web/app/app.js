@@ -80,6 +80,8 @@ $(function() {
   window.MenuButtonView = Backbone.View.extend({
     tagName: 'div',
 
+    className: 'menu_button',
+
     events: {
       "click"  : "open"
     },
@@ -123,6 +125,8 @@ $(function() {
       this.tutorialView = new TutorialView();
       this.historyView = new HistoryView();
       this.friendsView = new FriendsView();
+
+      this.menuView.render();
 
       // Init the Routes
       var dnbRouter = new DnbRouter({app: this});
@@ -168,7 +172,6 @@ $(function() {
 
     _showOne: function(view) {
       $(view.el).show();
-      view.render();
     }
   };
 
