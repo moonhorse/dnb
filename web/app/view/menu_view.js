@@ -6,6 +6,8 @@ MenuView = Backbone.View.extend({
 
   render: function() {
     var items = this.model.get('items');
+
+    $('#menu_panel').html('');
     for (var i = 0; i < items.length; i++) {
       var button = new MenuButtonView({display: items[i].display, nav: items[i].nav});
       $('#menu_panel').append(button.render().el);
