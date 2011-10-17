@@ -15,6 +15,8 @@ GameModel = Backbone.Model.extend({
     finished: false
   },
 
+  urlRoot: '/api/game/',
+
   newGame: function() {
     this.set(this.defaults, {silent: true});
   },
@@ -40,7 +42,9 @@ GameModel = Backbone.Model.extend({
     if (!finished) {
       setTimeout(function() {
         _this.next();
-      }, 5000);
+      }, 1000);
+    } else {
+      this.save();
     }
   },
 
