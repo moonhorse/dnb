@@ -3,7 +3,7 @@ dojo.provide('view.menu_button_view');
 MenuButtonView = Backbone.View.extend({
   tagName: 'div',
 
-  className: 'menu_button',
+  className: 'h_button',
 
   events: {
     "click"  : "open"

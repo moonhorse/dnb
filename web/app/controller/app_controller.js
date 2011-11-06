@@ -1,5 +1,4 @@
 dojo.provide('controller.app_controller');
-
 dojo.require('model.menu_model');
 dojo.require('model.game_model');
 dojo.require('controller.router');
@@ -9,28 +8,67 @@ dojo.require('view.history_view');
 dojo.require('view.game_view');
 dojo.require('view.menu_view');
 
+dojo.require('model.nav_model');
+dojo.require('view.main_view');
+dojo.require('controller.router');
+
 DnbApp = {
   init: function() {
-    // Init the viewsS
+    var views = this._initContentViews();
+    this._initMainView(views);
+    this._initRouter();
+
+  },
+
+  showGame: function() {
+    this.navModel.set({title: 'Dual N Back', id: 'menu'});
+  },
+
+  _initMainView: function(contentViews) {
+    this.navModel = new NavModel();
+    this.mainView = new MainView({
+      model: this.navModel,
+      contentViews: contentViews
+    });
+
+    this.mainView.render();
+  },
+
+  _initContentViews: function() {
+    // Init the views.
+    // Render them before they are used.
     this.menuModel = new MenuModel();
     this.menuView = new MenuView({
       model: this.menuModel
     });
+    this.menuView.render();
 
     this.gameModel = new GameModel();
     this.gameView = new GameView({
       model: this.gameModel
     });
+    this.gameView.render();
 
     this.tutorialView = new TutorialView();
-    this.historyView = new HistoryView();
-    this.friendsView = new FriendsView();
+    this.tutorialView.render();
 
+    this.historyView = new HistoryView();
+    this.historyView.render();
+
+    this.friendsView = new FriendsView();
+    this.friendsView.render();
+
+    return [this.menuView, this.gameView, this.tutorialView, this.historyView, this.friendsView];
+
+  },
+
+  _initRouter: function() {
     // Init the Routes
     var dnbRouter = new DnbRouter({app: this});
     Backbone.history.start();
-  },
+  }
 
+/*
   showMenu: function() {
     this._hideAll();
     this.menuView.render();
@@ -75,5 +113,5 @@ DnbApp = {
 
   _showOne: function(view) {
     $(view.el).show();
-  }
+  }*/
 };

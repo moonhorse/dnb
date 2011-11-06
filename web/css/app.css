@@ -1,28 +1,76 @@
-body {
-  background-color: #d7ebf5;
-}
-#menu {
-  padding: 50px 0px;
-}
-#menu #menu_title {
-  margin: 0px auto;
-  font-size: 50px;
-  line-height: 100px;
-  width: 300px;
+.large_title {
+  font-size: 40px;
   text-align: center;
   text-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  font-weight: bold;
 }
-#menu #menu_panel .menu_button {
-  font-size: 30px;
-  color: white;
-  line-height: 50px;
-  width: 200px;
-  margin: 10px auto;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+.text {
+  font-size: 19px;
+  color: #666666;
+  font-weight: bold;
+}
+.h_button {
+  font-size: 40px;
   text-align: center;
+  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  font-weight: bold;
+  width: 300px;
+  height: 60px;
+  line-height: 60px;
   -webkit-border-radius: 10px;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #6ec9fa), color-stop(0.73, #38b9ff), color-stop(0.93, #82cdf5));
+  border: 1px solid #9A9A9A;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffbc58), to(#ffbc58), color-stop(0.5, #ffa51e));
+}
+.bar {
+  -webkit-box-flex: 1;
+  max-height: 90px;
+  min-height: 90px;
+  width: 100%;
+}
+body {
+  margin: 0px;
+}
+#main {
+  height: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+#main #top_bar {
+  -webkit-box-flex: 1;
+  max-height: 90px;
+  min-height: 90px;
+  width: 100%;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#01ccff), to(#01ccff), color-stop(0.5, #0099cc));
+}
+#main #top_bar #title {
+  line-height: 90px;
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  font-weight: bold;
+}
+#main #content {
+  -webkit-box-flex: 10;
+  display: -webkit-box;
+}
+#main #bottom_nav {
+  -webkit-box-flex: 1;
+  max-height: 90px;
+  min-height: 90px;
+  width: 100%;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5d5d5d), to(#5d5d5d), color-stop(0.5, #000000));
+}
+#menu #menu_improve {
+  padding: 30px 60px 60px 60px;
+}
+#menu #menu_panel {
+  margin-left: 90px;
+}
+#menu #menu_panel .h_button {
+  margin-bottom: 30px;
 }
 #game {
   width: 300px;

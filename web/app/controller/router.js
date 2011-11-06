@@ -2,17 +2,25 @@ dojo.provide('controller.router');
 
 DnbRouter = Backbone.Router.extend({
   routes: {
+
+    ""             :        "game"
+/*
     ""             :        "menu",
     "game"         :        "game",
     "history"      :        "history",
     "friends"      :        "friends",
-    "tutorial"     :        "tutorial"
+    "tutorial"     :        "tutorial"*/
   },
 
   initialize: function(options) {
     this.app = options.app;
   },
 
+  game: function() {
+    this.app.showGame();
+  }
+
+/*
   menu: function() {
     this.app.showMenu();
   },
@@ -31,5 +39,5 @@ DnbRouter = Backbone.Router.extend({
 
   tutorial: function() {
     this.app.showTutorial();
-  }
+  }*/
 });

@@ -1,44 +1,11 @@
-body {
-  background-color: #d7ebf5;
-}
+@import "iphone.less";
+@import "text.less";
+@import "button.less";
 
-#menu {
-  padding: 50px 0px;
-
-  #menu_title {
-    margin: 0px auto;
-    font-size: 50px;
-    line-height: 100px;
-    width: 300px;
-    text-align: center;
-    text-shadow: 0 3px 3px rgba(0,0,0,.5);
-  }
-
-  #menu_panel {
-    .menu_button {
-      font-size: 30px;
-      color: white;
-      line-height: 50px;
-      width : 200px;
-      margin: 10px auto;
-      text-shadow: 0 1px 1px rgba(0,0,0,.3);
-      text-align: center;
-      -webkit-border-radius: 10px;
-      -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-      background-image: -webkit-gradient(
-              linear,
-              left bottom,
-              left top,
-              color-stop(0, #6EC9FA),
-              color-stop(0.73, #38B9FF),
-              color-stop(0.93, #82CDF5)
-      );
-    }
-  }
-}
+@import "main.less";
+@import "menu.less";
 
 #game {
-
   width: 300px;
 
   .game_row {

@@ -1,0 +1,32 @@
+body {
+  margin: 0px;
+}
+
+#main {
+  height: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+
+  #top_bar {
+    .bar;
+
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#01CCFF), to(#01CCFF), color-stop(.5, #0099CC));
+
+    #title {
+      line-height: @grid * 3;
+      .large_title
+    }
+  }
+
+  #content {
+    -webkit-box-flex: 10;
+    display: -webkit-box;
+  }
+
+  #bottom_nav {
+    .bar;
+
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5D5D5D), to(#5D5D5D), color-stop(.5, #000000));
+  }
+}
+
