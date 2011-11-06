@@ -11,25 +11,46 @@
   </head>
 
   <body>
-<!-- 
-    <div id='menu'>
-      <div id='menu_title'>Dual N back </div>
-      <div id='menu_panel'></div>
-    </div>
-    <div id='game'>
-      game
-    </div>
-    <div id='history'>
-      history
-    </div>
-    <div id='friends'>
-      friends
-    </div>
-    <div id='tutorial'>
-      tutorial
-    </div> -->
+    <!-- FB init -->
+    <div id="fb-root"></div>
+    <script>
+      function handleStatusChange(response) {
+        document.body.className = response.authResponse ? 'connected' : 'not_connected';
+
+        if (response.authResponse) {
+          console.log(response);
+        }
+      }
+
+      function loginUser() {
+        FB.login(function(response) { }, {});
+      }
+
+      window.fbAsyncInit = function() {
+        FB.init({ appId: '217583671596528',
+          status: true,
+          cookie: true,
+          xfbml: true,
+          oauth: true});
+
+          FB.Event.subscribe('auth.statusChange', handleStatusChange);
+      };
+
+      (function() {
+        var e = document.createElement('script'); e.async = true;
+            e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+            document.getElementById('fb-root').appendChild(e);
+       }());
+    </script>
 
     <div id='main'>
+    </div>
+
+    <div id="login">
+      <p><button onClick="loginUser();">Login</button></p>
+    </div>
+    <div id="logout">
+      <p><button  onClick="FB.logout();">Logout</button></p>
     </div>
   </body>
 </html>

@@ -21,7 +21,7 @@ MenuView = Backbone.View.extend({
       panel.append(button.render().el);
     }
 
-    $(this.el).append(panel);  
+    $(this.el).append(panel);
     return this;
   }
 });
