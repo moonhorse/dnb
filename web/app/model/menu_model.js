@@ -5,19 +5,19 @@ MenuModel = Backbone.Model.extend({
     items: [
       {
         display: 'New Game',
-        nav: 'game'
-      },
-      {
-        display: 'History',
-        nav: 'history'
-      },
-      {
-        display: 'Friends',
-        nav: 'friends'
+        nav: 'newGame'
       },
       {
         display: 'Tutorial',
         nav: 'tutorial'
+      },
+      {
+        display: 'Training',
+        nav: 'training'
+      },
+      {
+        display: 'History',
+        nav: 'history'
       }
     ]
   }

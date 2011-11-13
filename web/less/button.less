@@ -1,11 +1,16 @@
-.h_button {
+.action_button {
   .large_title;
+
+  -webkit-border-radius: 10px;
+  border: 1px solid #9A9A9A;
+}
+
+.h_button {
+  .action_button;
 
   width: @grid * 10;
   height: @grid * 2;
   line-height: @grid * 2;
-  -webkit-border-radius: 10px;
-  border: 1px solid #9A9A9A;
 
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFBC58), to(#FFBC58), color-stop(.5, #FFA51E));
 }
@@ -14,6 +19,39 @@
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E3A74E), to(#E3A74E), color-stop(.6,#BD7A16));
   color: #DDDDDD;
 }
+
+.v_button {
+  .action_button;
+
+  width: @grid * 3;
+  height: @grid * 10;
+  line-height: @grid * 10;
+
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#FFBC58), to(#FFBC58), color-stop(.5, #FFA51E));
+}
+
+.v_button:active {
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#E3A74E), to(#E3A74E), color-stop(.6,#BD7A16));
+  color: #DDDDDD;
+}
+
+.h_s_button {
+  width: @grid * 4;
+  height: @grid * 2;
+  line-height: @grid * 2;
+  text-align: center;
+  font-weight: bold;
+
+  color: #009CC9;
+  -webkit-border-radius: 10px;
+  border: 1px solid #999999;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#9EFFF0), to(#9EFFF0), color-stop(.5, #00FED0));
+}
+
+.h_s_button:active {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#90E8DA), to(#90E8DA), color-stop(.5, #00E0B8));
+}
+
 
 .bar {
   -webkit-box-flex: 1;

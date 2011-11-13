@@ -14,15 +14,15 @@ MainView = Backbone.View.extend({
   render: function() {
     var html;
 
-    var topBarView = new TopBarView({
+    this.topBarView = new TopBarView({
       model: this.model
     });
 
-    var bottomNavView = new BottomNavView({
+    this.bottomNavView = new BottomNavView({
       model: this.model
     });
 
-    $('#main').append(topBarView.render().el);
+    $('#main').append(this.topBarView.render().el);
 
     var content = $('<div id="content"></div>');
     _.forEach(this.contentViews, function(view) {
@@ -30,7 +30,7 @@ MainView = Backbone.View.extend({
     });
 
     $('#main').append(content);
-    $('#main').append(bottomNavView.render().el);
+    $('#main').append(this.bottomNavView.render().el);
 
     return this;
   },
@@ -45,6 +45,15 @@ MainView = Backbone.View.extend({
         } else {
           $(view.el).hide();
         }
+      }
+
+      // Whether or not to show the navigation chrome
+      if (this.model.get('fullScreen')) {
+        $(this.topBarView.el).hide();
+        $(this.bottomNavView.el).hide();
+      } else {
+        $(this.topBarView.el).show();
+        $(this.bottomNavView.el).show();
       }
     }
   }

@@ -20,8 +20,19 @@ DnbApp = {
 
   },
 
-  showGame: function() {
-    this.navModel.set({title: 'Dual N Back', id: 'menu'});
+  showGame: function(viewName) {
+    var fullScreen = false;
+    switch (viewName) {
+      case 'game':
+        // Restart
+        this.gameModel.newGame();
+        this.gameModel.next();
+        fullScreen = true;
+        break;
+      default:
+        break;
+    }
+    this.navModel.set({title: 'Dual N Back', id: viewName, fullScreen: fullScreen});
   },
 
   _initMainView: function(contentViews) {

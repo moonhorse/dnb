@@ -1,15 +1,18 @@
 dojo.provide('view.game_view');
 dojo.require('model.game_model');
+dojo.require('view.templates');
 
 GameView = Backbone.View.extend({
-  el: '#game',
+  id: 'game',
   tagName: 'div',
 
-  template: _.template('<div><%= board %><div><div class="game_button"><div class="audio_button">A</div><div class="buffer"></div><div class="square_button">S</div></div>'),
+  template: _.template(TPL_GAME),
 
   events: {
-    "click .audio_button"  : "_onAudio",
-    "click .square_button"  : "_onSquare"
+    "click #audio_button"  : "_onAudio",
+    "click #square_button"  : "_onSquare",
+    "click #restart_button"  : "_onRestart",
+    "click #exit_button"  : "_onExit"
   },
 
   initialize: function() {
@@ -50,5 +53,15 @@ GameView = Backbone.View.extend({
 
   _onSquare: function() {
     this.model.press('square');
+  },
+
+  _onRestart: function() {
+    // TODO: Restart not completely working.
+    this.model.newGame();
+    this.model.next();
+  },
+
+  _onExit: function() {
+    Backbone.history.navigate('', true);
   }
 });

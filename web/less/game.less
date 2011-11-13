@@ -1,0 +1,47 @@
+#game {
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  padding-top: @grid;
+
+  .game_row {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    max-height: @grid * 4;
+    height: @grid * 4;
+
+    .game_col {
+      -webkit-box-flex : 1;
+      max-width: @grid * 4;
+      width: @grid * 4;
+      border: 1px solid black;
+      background-color: white;
+
+      &.highlight {
+        background-color: black;
+      }
+    }
+  }
+
+  #game_left, #game_right {
+    .h_s_button {
+      margin-bottom: @grid * 2;
+    }
+
+    -webkit-box-flex: 1;
+    min-width: @grid * 4;
+    padding: 0 @grid 0 @grid;
+  }
+
+  #game_right {
+    .v_button {
+      margin-left: @grid;
+    }
+  }
+
+  #game_board {
+    -webkit-box-flex: 10;
+    min-width: @grid * 12;
+    -webkit-box-orient: horizontal;
+  }
+}

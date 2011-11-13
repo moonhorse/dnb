@@ -2,6 +2,8 @@ dojo.provide('model.nav_model');
 
 NavModel = Backbone.Model.extend({
   defaults: {
-    title: 'Title'
+    title: 'Title',
+    fullScreen: false,
+    id: ''
   }
 });
