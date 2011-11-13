@@ -18,5 +18,7 @@ BottomNavView = Backbone.View.extend({
   },
 
   update: function() {
+    if (this.model) {
+    }
   }
 });

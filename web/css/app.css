@@ -23,6 +23,10 @@
   border: 1px solid #9A9A9A;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffbc58), to(#ffbc58), color-stop(0.5, #ffa51e));
 }
+.h_button:active {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e3a74e), to(#e3a74e), color-stop(0.6, #bd7a16));
+  color: #DDDDDD;
+}
 .bar {
   -webkit-box-flex: 1;
   max-height: 90px;
@@ -61,7 +65,31 @@ body {
   max-height: 90px;
   min-height: 90px;
   width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5d5d5d), to(#5d5d5d), color-stop(0.5, #000000));
+}
+#main #bottom_nav > div {
+  -webkit-box-flex: 1;
+  background-repeat: no-repeat;
+  background-position: center 9px;
+  background-size: 45px 45px;
+  color: #999999;
+  padding: 60px 0px 0px 36px;
+}
+#main #bottom_nav #nav_game {
+  background-image: url('../images/home.png');
+  background-color: white;
+  opacity: 0.5;
+}
+#main #bottom_nav #nav_friends {
+  background-image: url('../images/friends.png');
+}
+#main #bottom_nav #nav_science {
+  background-image: url('../images/science.png');
+}
+#main #bottom_nav #nav_settings {
+  background-image: url('../images/settings.png');
 }
 #menu #menu_improve {
   padding: 30px 60px 60px 60px;

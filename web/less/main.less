@@ -26,6 +26,39 @@ body {
   #bottom_nav {
     .bar;
 
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+
+    > div {
+      -webkit-box-flex: 1;
+      background-repeat: no-repeat;
+      background-position: center @grid * 0.3;
+      background-size: @grid * 1.5  @grid * 1.5;
+      color: #999999;
+      padding: @grid * 2 0px 0px @grid * 1.2;
+    }
+
+    > div .highlight {
+    }
+
+    #nav_game {
+      background-image: url('../images/home.png');
+      background-color: white;
+      opacity: 0.5;
+    }
+
+    #nav_friends {
+      background-image: url('../images/friends.png');
+    }
+
+    #nav_science {
+      background-image: url('../images/science.png');
+    }
+
+    #nav_settings {
+      background-image: url('../images/settings.png');
+    }
+
     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5D5D5D), to(#5D5D5D), color-stop(.5, #000000));
   }
 }
