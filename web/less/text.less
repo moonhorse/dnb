@@ -1,9 +1,24 @@
-.large_title {
-  font-size: @grid + 10;
+.title {
   text-align: center;
   text-shadow: 0 3px 3px rgba(0,0,0,.5);
   color: #FFF;
   font-weight: bold;
+}
+
+.large_title {
+  .title;
+
+  font-size: @grid + 10;
+}
+
+.small_title {
+  .title;
+
+  font-size: @grid;
+}
+
+.text_hl {
+  color: 009CC9;
 }
 
 .text {

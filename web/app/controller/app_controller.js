@@ -35,6 +35,10 @@ DnbApp = {
     this.navModel.set({title: 'Dual N Back', id: viewName, fullScreen: fullScreen});
   },
 
+  showFriends: function() {
+    this.navModel.set({title: 'Friends', id: 'friends', fullScreen: false});
+  },
+
   _initMainView: function(contentViews) {
     this.navModel = new NavModel();
     this.mainView = new MainView({
