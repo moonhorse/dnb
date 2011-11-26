@@ -1,9 +1,13 @@
-.h_yellow_gradient {
+.h_orange_gradient {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFBC58), to(#FFBC58), color-stop(.5, #FFA51E));
 }
 
-.h_yellow_gradient_active {
+.h_orange_gradient_active {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E3A74E), to(#E3A74E), color-stop(.6,#BD7A16));
+}
+
+.h_yellow_gradient {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFF6F), to(#FFFF6F), color-stop(.5, #FFFF10));
 }
 
 .action_button {
@@ -14,7 +18,7 @@
 }
 
 .h_button {
-  .h_yellow_gradient;
+  .h_orange_gradient;
   .action_button;
 
   width: @grid * 10;
@@ -24,21 +28,21 @@
 }
 
 .h_button:active {
-  .h_yellow_gradient_active;
+  .h_orange_gradient_active;
 
   color: #DDDDDD;
 }
 
 .h_s_button {
   .small_title;
-  .h_yellow_gradient;
+  .h_orange_gradient;
 
   height: @grid;
   width: @grid * 4;
 }
 
 .h_s_button:active {
-  .h_yellow_gradient_active;
+  .h_orange_gradient_active;
 
   color: #DDDDDD;
 }

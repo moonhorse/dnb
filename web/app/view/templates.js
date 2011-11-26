@@ -17,9 +17,27 @@ TPL_GAME = '<div id="game_left">' +
            '</div>';
 
 TPL_FRIENDS = '<div id="rank_desc" class="text">' +
-                'Friends are working hard on their IQ! You rank <span class="text_hl"> <%= rank %> </span> among your friends!' +
+                'Friends are working hard on their IQ! You rank <span id="rank"> </span> among your friends!' +
               '</div>' +
-              '<div id="leader_board"> <%= leaderboard %> </div>' +
+              '<div id="leader_board"> </div>' +
               '<div id="invite_button" class="h_button"> Invite </div>';
 
-         
+TPL_LEADERBOARD_ROW = '<div class="leader_row">' +
+                        '<div class="thumbnail_container">' +
+                           '<div class="thumbnail" style="background-image: url(\'<%= thumbnail %>\') "></div>' +
+                           '<div class="name"><%= name %></div>' +
+                        '</div>' +
+                        '<div class="score"><%= score %></div>' +
+                        '<div class="challenge"></div>' +
+                      '</div>';
+
+TPL_HISTORY = '<div id="title" class="text">' +
+                'Dnb Game Score' +
+              '</div>' +
+              '<div id="history_chart"> </div>' +
+              '<div id="date_button">' +
+                '<div class="left" > 2 weeks</div>' +
+                '<div class="center" > 1 month</div>' +
+                '<div class="right"> 3 months</div>' +
+              '</div>';
+

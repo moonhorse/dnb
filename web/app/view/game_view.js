@@ -58,7 +58,7 @@ GameView = Backbone.View.extend({
   _onRestart: function() {
     // TODO: Restart not completely working.
     this.model.newGame();
-    this.model.next();
+    // this.model.next();
   },
 
   _onExit: function() {

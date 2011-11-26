@@ -5,6 +5,7 @@ DnbRouter = Backbone.Router.extend({
 
     ""             :        "game",
     "newGame"      :        "game_NewGame",
+    "history"      :        "game_History",
     "friends"      :        "friends"
     
    
@@ -26,6 +27,10 @@ DnbRouter = Backbone.Router.extend({
 
   game_NewGame: function() {
     this.app.showGame('game');
+  },
+
+  game_History: function() {
+    this.app.showGame('history');
   },
 
   friends: function() {

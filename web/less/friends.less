@@ -3,6 +3,44 @@
   }
 
   #leader_board {
+    width: 100%;
+    padding: 0px @grid;
+
+    .leader_row {
+      display: -webkit-box;
+      -webkit-box-orient: horizontal;
+
+      .thumbnail_container {
+        -webkit-box-flex : 1;
+        min-width: @grid * 4;
+        max-width: @grid * 4;
+
+        & > div {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .thumbnail {
+          background-size: @grid * 2 @grid * 2;
+          background-repeat: no-repeat;
+          width: @grid * 2;
+          height: @grid * 2;
+        }
+
+        .name {
+          height: @grid;
+          line-height: @grid;
+        }
+      }
+
+      .score {
+        -webkit-box-flex : 4;
+      }
+
+      .challenge {
+        -webkit-box-flex : 1;
+      }
+    }
   }
 
   #invite_button {

@@ -1,6 +1,10 @@
 dojo.provide('controller.app_controller');
 dojo.require('model.menu_model');
 dojo.require('model.game_model');
+dojo.require('model.nav_model');
+dojo.require('model.history_model');
+dojo.require('model.leaderboard_model');
+
 dojo.require('controller.router');
 dojo.require('view.tutorial_view');
 dojo.require('view.friends_view');
@@ -8,7 +12,6 @@ dojo.require('view.history_view');
 dojo.require('view.game_view');
 dojo.require('view.menu_view');
 
-dojo.require('model.nav_model');
 dojo.require('view.main_view');
 dojo.require('controller.router');
 
@@ -26,7 +29,10 @@ DnbApp = {
       case 'game':
         // Restart
         this.gameModel.newGame();
-        this.gameModel.next();
+        // this.gameModel.next();
+        fullScreen = true;
+        break;
+      case 'history':
         fullScreen = true;
         break;
       default:
@@ -67,10 +73,18 @@ DnbApp = {
     this.tutorialView = new TutorialView();
     this.tutorialView.render();
 
-    this.historyView = new HistoryView();
+    this.historyModel = new HistoryModel();
+    this.historyView = new HistoryView({
+      model: this.historyModel
+    });
+
     this.historyView.render();
 
-    this.friendsView = new FriendsView();
+    this.leaderboardModel = new LeaderboardModel();
+    this.friendsView = new FriendsView({
+      model: this.leaderboardModel 
+    });
+
     this.friendsView.render();
 
     return [this.menuView, this.gameView, this.tutorialView, this.historyView, this.friendsView];

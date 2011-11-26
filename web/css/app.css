@@ -26,11 +26,14 @@
   color: #666666;
   font-weight: bold;
 }
-.h_yellow_gradient {
+.h_orange_gradient {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffbc58), to(#ffbc58), color-stop(0.5, #ffa51e));
 }
-.h_yellow_gradient_active {
+.h_orange_gradient_active {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e3a74e), to(#e3a74e), color-stop(0.6, #bd7a16));
+}
+.h_yellow_gradient {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffff6f), to(#ffff6f), color-stop(0.5, #ffff10));
 }
 .action_button {
   text-align: center;
@@ -203,7 +206,7 @@ body {
   min-width: 120px;
   padding: 0 30px 0 30px;
 }
-#game #game_left .h_s_button, #game #game_right .h_s_button {
+#game #game_left .h_blue_button, #game #game_right .h_blue_button {
   margin-bottom: 60px;
 }
 #game #game_right .v_button {
@@ -213,4 +216,92 @@ body {
   -webkit-box-flex: 10;
   min-width: 360px;
   -webkit-box-orient: horizontal;
+}
+#friends #leader_board {
+  width: 100%;
+  padding: 0px 30px;
+}
+#friends #leader_board .leader_row {
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+}
+#friends #leader_board .leader_row .thumbnail_container {
+  -webkit-box-flex: 1;
+  min-width: 120px;
+  max-width: 120px;
+}
+#friends #leader_board .leader_row .thumbnail_container  > div {
+  margin-left: auto;
+  margin-right: auto;
+}
+#friends #leader_board .leader_row .thumbnail_container .thumbnail {
+  background-size: 60px 60px;
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+}
+#friends #leader_board .leader_row .thumbnail_container .name {
+  height: 30px;
+  line-height: 30px;
+}
+#friends #leader_board .leader_row .score {
+  -webkit-box-flex: 4;
+}
+#friends #leader_board .leader_row .challenge {
+  -webkit-box-flex: 1;
+}
+.gray_boarder {
+  border-width: 1px;
+  border-color: #999;
+}
+#history {
+  width: 100%;
+}
+#history  > div {
+  margin: auto;
+}
+#history #title {
+  color: #0099CC;
+  text-align: center;
+  font-size: 48px;
+}
+#history #history_chart {
+  width: 480px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#history #date_button {
+  width: 360px;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  text-align: center;
+}
+#history #date_button  > div {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffbc58), to(#ffbc58), color-stop(0.5, #ffa51e));
+  -webkit-box-flex: 1;
+  height: 60px;
+  line-height: 60px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #999;
+}
+#history #date_button .left {
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  border-style: solid none solid solid;
+  border-width: 1px;
+  border-color: #999;
+}
+#history #date_button .center {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffff6f), to(#ffff6f), color-stop(0.5, #ffff10));
+  border-style: solid;
+  border-width: 1px;
+  border-color: #999;
+}
+#history #date_button .right {
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  border-style: solid solid solid none;
+  border-width: 1px;
+  border-color: #999;
 }
