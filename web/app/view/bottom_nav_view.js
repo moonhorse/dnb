@@ -8,7 +8,8 @@ BottomNavView = Backbone.View.extend({
 
   events: {
     "click #nav_game" : "showGame",
-    "click #nav_friends" : "showFriends"
+    "click #nav_friends" : "showFriends",
+    "click #nav_settings" : "showSettings"
   },
 
   template: _.template(TPL_BOTTOM_NAV),
@@ -58,5 +59,9 @@ BottomNavView = Backbone.View.extend({
 
   showFriends: function() {
     Backbone.history.navigate("friends", true);
+  },
+
+  showSettings: function() {
+    Backbone.history.navigate("settings", true);
   }
 });

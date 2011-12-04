@@ -1,0 +1,71 @@
+#settings {
+  width: 100%;
+  margin-top: @grid;
+
+  & > div {
+    margin: @grid @grid * 2;
+    -webkit-box-orient: horizontal;
+    display: -webkit-box;
+    line-height: @grid;
+    font-size: @grid / 2 + 4;
+    font-weight: bold;
+
+    .setting_text {
+      -webkit-box-flex : 8;
+      display: -webkit-box;
+      color: #666;
+    }
+
+    .setting_op {
+      -webkit-box-flex : 1;
+      display: -webkit-box;
+      min-width: @grid * 4;
+      max-width: @grid * 4;
+      text-align: center;
+    }
+  }
+
+  #setting_nback .setting_op {
+    & > span {
+      display: block;
+      height: @grid;
+    }
+
+    .left {
+      background: url('../images/tri-left.png') no-repeat 50% 50%;
+      background-size: @grid;
+      width: @grid;
+    }
+
+    #setting_nback_num {
+      width: @grid * 2;
+    }
+
+    .right {
+      background: url('../images/tri-right.png') no-repeat 50% 50%;
+      background-size: @grid;
+      width: @grid;
+    }
+  }
+
+  #setting_speed .setting_op {
+    & > span {
+      .small_round_corner;
+      height: @grid;
+      width: @grid * 2;
+      display: block;
+      position: relative;
+      z-index: 0;
+    }
+
+    & > span.highlight {
+      .h_orange_gradient;
+      z-index: 100;
+    }
+
+    .right {
+      position: relative;
+      left: -5px;
+    }
+  }
+}

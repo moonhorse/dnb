@@ -11,6 +11,7 @@ dojo.require('view.friends_view');
 dojo.require('view.history_view');
 dojo.require('view.game_view');
 dojo.require('view.menu_view');
+dojo.require('view.settings_view');
 
 dojo.require('view.main_view');
 dojo.require('controller.router');
@@ -43,6 +44,10 @@ DnbApp = {
 
   showFriends: function() {
     this.navModel.set({title: 'Friends', id: 'friends', fullScreen: false});
+  },
+
+  showSettings: function() {
+    this.navModel.set({title: 'Settings', id: 'settings', fullScreen: false});
   },
 
   _initMainView: function(contentViews) {
@@ -87,7 +92,10 @@ DnbApp = {
 
     this.friendsView.render();
 
-    return [this.menuView, this.gameView, this.tutorialView, this.historyView, this.friendsView];
+    this.settingsView = new SettingsView();
+    this.settingsView.render();
+
+    return [this.menuView, this.gameView, this.tutorialView, this.historyView, this.friendsView, this.settingsView];
 
   },
 

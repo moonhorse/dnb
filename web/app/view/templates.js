@@ -44,3 +44,18 @@ TPL_HISTORY = '<div id="title" class="text">' +
                 '<div class="right"> 3 months</div>' +
               '</div>';
 
+TPL_SETTINGS = '<div id="setting_nback">' +
+                 '<div class="setting_text">Start # of n Back</div>' +
+                 '<div class="setting_op">' +
+                   '<span class="left"></span>' +
+                   '<span id="setting_nback_num" class="num"></span>' +
+                   '<span class="right"></span>' +
+                 '</div>' +
+               '</div>' +
+               '<div id="setting_speed">' +
+                 '<div class="setting_text">Speed</div>' +
+                 '<div class="setting_op">' +
+                   '<span class="left highlight">1x</span>' +
+                   '<span class="right">2x</span>' +
+                 '</div>' +
+               '</div>';

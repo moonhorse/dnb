@@ -33,6 +33,10 @@
   -webkit-border-radius: 10px;
   border: 1px solid #9A9A9A;
 }
+.small_round_corner {
+  -webkit-border-radius: 3px;
+  border: 1px solid #9A9A9A;
+}
 .h_orange_gradient {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffbc58), to(#ffbc58), color-stop(0.5, #ffa51e));
 }
@@ -186,7 +190,7 @@ body {
 }
 #main #bottom_nav .shield {
   background-color: #FFF;
-  opacity: 0.5;
+  opacity: 0.2;
   display: none;
   position: absolute;
   top: 7.5px;
@@ -347,4 +351,62 @@ body {
   border-style: solid solid solid none;
   border-width: 1px;
   border-color: #999;
+}
+#settings {
+  width: 100%;
+  margin-top: 30px;
+}
+#settings  > div {
+  margin: 30px 60px;
+  -webkit-box-orient: horizontal;
+  display: -webkit-box;
+  line-height: 30px;
+  font-size: 19px;
+  font-weight: bold;
+}
+#settings  > div .setting_text {
+  -webkit-box-flex: 8;
+  display: -webkit-box;
+  color: #666;
+}
+#settings  > div .setting_op {
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  min-width: 120px;
+  max-width: 120px;
+  text-align: center;
+}
+#settings #setting_nback .setting_op  > span {
+  display: block;
+  height: 30px;
+}
+#settings #setting_nback .setting_op .left {
+  background: url('../images/tri-left.png') no-repeat 50% 50%;
+  background-size: 30px;
+  width: 30px;
+}
+#settings #setting_nback .setting_op #setting_nback_num {
+  width: 60px;
+}
+#settings #setting_nback .setting_op .right {
+  background: url('../images/tri-right.png') no-repeat 50% 50%;
+  background-size: 30px;
+  width: 30px;
+}
+#settings #setting_speed .setting_op  > span {
+  -webkit-border-radius: 3px;
+  border: 1px solid #9A9A9A;
+  height: 30px;
+  width: 60px;
+  display: block;
+  position: relative;
+  z-index: 0;
+}
+#settings #setting_speed .setting_op  > span.highlight {
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffbc58), to(#ffbc58), color-stop(0.5, #ffa51e));
+  z-index: 100;
+}
+#settings #setting_speed .setting_op .right {
+  position: relative;
+  left: -5px;
 }
