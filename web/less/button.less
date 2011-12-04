@@ -1,3 +1,8 @@
+.round_corner {
+  -webkit-border-radius: 10px;
+  border: 1px solid #9A9A9A;
+}
+
 .h_orange_gradient {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFBC58), to(#FFBC58), color-stop(.5, #FFA51E));
 }
@@ -12,9 +17,7 @@
 
 .action_button {
   .large_title;
-
-  -webkit-border-radius: 10px;
-  border: 1px solid #9A9A9A;
+  .round_corner;
 }
 
 .h_button {
@@ -24,7 +27,6 @@
   width: @grid * 10;
   height: @grid * 2;
   line-height: @grid * 2;
-
 }
 
 .h_button:active {
@@ -36,6 +38,7 @@
 .h_s_button {
   .small_title;
   .h_orange_gradient;
+  .round_corner;
 
   height: @grid;
   width: @grid * 4;

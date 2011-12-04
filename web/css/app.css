@@ -18,13 +18,20 @@
   font-weight: bold;
   font-size: 30px;
 }
-.text_hl {
-  color: 009CC9;
-}
 .text {
   font-size: 19px;
   color: #666666;
   font-weight: bold;
+}
+.text_hl {
+  font-size: 19px;
+  color: #666666;
+  font-weight: bold;
+  color: 009CC9;
+}
+.round_corner {
+  -webkit-border-radius: 10px;
+  border: 1px solid #9A9A9A;
 }
 .h_orange_gradient {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffbc58), to(#ffbc58), color-stop(0.5, #ffa51e));
@@ -68,6 +75,8 @@
   font-weight: bold;
   font-size: 30px;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffbc58), to(#ffbc58), color-stop(0.5, #ffa51e));
+  -webkit-border-radius: 10px;
+  border: 1px solid #9A9A9A;
   height: 30px;
   width: 120px;
 }
@@ -155,11 +164,16 @@ body {
   background-size: 45px 45px;
   color: #999999;
   padding: 60px 0px 0px 36px;
+  position: relative;
+}
+#main #bottom_nav > div.highlight .shield {
+  display: block;
+}
+#main #bottom_nav > div.highlight {
+  color: #FFF;
 }
 #main #bottom_nav #nav_game {
   background-image: url('../images/home.png');
-  background-color: white;
-  opacity: 0.5;
 }
 #main #bottom_nav #nav_friends {
   background-image: url('../images/friends.png');
@@ -169,6 +183,17 @@ body {
 }
 #main #bottom_nav #nav_settings {
   background-image: url('../images/settings.png');
+}
+#main #bottom_nav .shield {
+  background-color: #FFF;
+  opacity: 0.5;
+  display: none;
+  position: absolute;
+  top: 7.5px;
+  left: 22.5px;
+  width: 75px;
+  height: 75px;
+  -webkit-border-radius: 5px;
 }
 #menu #menu_improve {
   padding: 30px 60px 60px 60px;
@@ -217,13 +242,20 @@ body {
   min-width: 360px;
   -webkit-box-orient: horizontal;
 }
+#friends {
+  text-align: center;
+  padding: 30px;
+}
+#friends #rank_desc {
+  margin-bottom: 30px;
+}
 #friends #leader_board {
   width: 100%;
-  padding: 0px 30px;
 }
 #friends #leader_board .leader_row {
   display: -webkit-box;
   -webkit-box-orient: horizontal;
+  margin-bottom: 30px;
 }
 #friends #leader_board .leader_row .thumbnail_container {
   -webkit-box-flex: 1;
@@ -246,9 +278,20 @@ body {
 }
 #friends #leader_board .leader_row .score {
   -webkit-box-flex: 4;
+  font-weight: bold;
+  font-size: 45px;
+  color: #000;
+  position: relative;
+  top: 7.5px;
 }
 #friends #leader_board .leader_row .challenge {
+  font-size: 19px;
   -webkit-box-flex: 1;
+  position: relative;
+  top: 15px;
+}
+#friends #invite_button {
+  margin: 30px auto;
 }
 .gray_boarder {
   border-width: 1px;

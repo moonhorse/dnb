@@ -2,7 +2,10 @@ dojo.provide('view.templates');
 
 TPL_TOP_BAR = '<div id="title">title</div>';
 
-TPL_BOTTOM_NAV = '<div id="nav_game">Game</div><div id="nav_friends">Friends</div><div id="nav_science">Science</div><div id="nav_settings">Settings</div>';
+TPL_BOTTOM_NAV = '<div id="nav_game"><div class="shield"></div>Game</div>' + 
+                 '<div id="nav_friends"><div class="shield"></div>Friends</div>' +
+                 '<div id="nav_science"><div class="shield"></div>Science</div>' +
+                 '<div id="nav_settings"><div class="shield"></div>Settings</div>';
 
 TPL_TEXT = '<div id="<%= id %>" class="text"><%= text %></div>';
 
@@ -25,10 +28,10 @@ TPL_FRIENDS = '<div id="rank_desc" class="text">' +
 TPL_LEADERBOARD_ROW = '<div class="leader_row">' +
                         '<div class="thumbnail_container">' +
                            '<div class="thumbnail" style="background-image: url(\'<%= thumbnail %>\') "></div>' +
-                           '<div class="name"><%= name %></div>' +
+                           '<div class="name text_hl"><%= name %></div>' +
                         '</div>' +
                         '<div class="score"><%= score %></div>' +
-                        '<div class="challenge"></div>' +
+                        '<div class="challenge h_s_button">Challenge</div>' +
                       '</div>';
 
 TPL_HISTORY = '<div id="title" class="text">' +

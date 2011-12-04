@@ -52,7 +52,7 @@ DnbApp = {
       contentViews: contentViews
     });
 
-    this.mainView.render();
+   this.mainView.render();
   },
 
   _initContentViews: function() {

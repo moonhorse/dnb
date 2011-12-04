@@ -1,14 +1,18 @@
 #friends {
+  text-align: center;
+  padding: @grid;
+
   #rank_desc {
+    margin-bottom: @grid;
   }
 
   #leader_board {
     width: 100%;
-    padding: 0px @grid;
 
     .leader_row {
       display: -webkit-box;
       -webkit-box-orient: horizontal;
+      margin-bottom: @grid;
 
       .thumbnail_container {
         -webkit-box-flex : 1;
@@ -35,14 +39,25 @@
 
       .score {
         -webkit-box-flex : 4;
+        font-weight: bold;
+        font-size: @grid * 1.5;
+        color: #000;
+
+        position: relative;
+        top: @grid / 4;
       }
 
       .challenge {
+        font-size: @grid / 2 + 4;
         -webkit-box-flex : 1;
+
+        position: relative;
+        top: @grid / 2;
       }
     }
   }
 
   #invite_button {
+    margin: @grid auto;
   }
 }

@@ -36,15 +36,19 @@ body {
       background-size: @grid * 1.5  @grid * 1.5;
       color: #999999;
       padding: @grid * 2 0px 0px @grid * 1.2;
+      position: relative;
     }
 
-    > div .highlight {
+    > div.highlight .shield{
+      display: block;
+    }
+
+    > div.highlight {
+     color: #FFF;
     }
 
     #nav_game {
       background-image: url('../images/home.png');
-      background-color: white;
-      opacity: 0.5;
     }
 
     #nav_friends {
@@ -57,6 +61,20 @@ body {
 
     #nav_settings {
       background-image: url('../images/settings.png');
+    }
+
+    .shield {
+      background-color: #FFF;
+      opacity: 0.2;
+      display: none;
+
+      position: absolute;
+      top: @grid / 4;
+      left: @grid * (3/4);
+      width: @grid * 2.5;
+      height: @grid * 2.5;
+
+      -webkit-border-radius: 5px;
     }
 
     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#5D5D5D), to(#5D5D5D), color-stop(.5, #000000));
