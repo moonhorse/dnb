@@ -1,6 +1,9 @@
 from piston.handler import BaseHandler
 from piston.utils import rc
 from pymongo import Connection
+from time import time
+from os import environ
+import logging
 
 class GameHandler(BaseHandler):
     allowed_methods = ('GET', 'POST')
@@ -13,5 +16,6 @@ class GameHandler(BaseHandler):
 
     def create(self, request, id):
         if (request.data):
+            request.data['time'] = time()
             self.games.insert(request.data)
         return rc.CREATED 

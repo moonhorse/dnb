@@ -10,14 +10,20 @@ TPL_BOTTOM_NAV = '<div id="nav_game"><div class="shield"></div>Game</div>' +
 TPL_TEXT = '<div id="<%= id %>" class="text"><%= text %></div>';
 
 TPL_GAME = '<div id="game_left">' +
+             '<div class="desc">Dual <%= nback %> Back</div>' +
              '<div id="restart_button" class="h_blue_button">Restart</div>' +
              '<div id="audio_button" class="v_button">A</div>' +
            '</div>' +
            '<div id="game_board"><%= board %></div>' + 
            '<div id="game_right">' +
+             '<div class="desc">' +
+                '<div> Daily Session <%= sessionNum %> / 20</div>' +
+                '<div> <%= stepsRemaining %> remaining</div>' +
+             '</div>' +
              '<div id="exit_button" class="h_blue_button">Exit</div>' +
              '<div id="square_button" class="v_button">S</div>' +
-           '</div>';
+           '</div>' +
+           '<audio id="game_audio"></audio>';
 
 TPL_FRIENDS = '<div id="rank_desc" class="text">' +
                 'Friends are working hard on their IQ! You rank <span id="rank"> </span> among your friends!' +

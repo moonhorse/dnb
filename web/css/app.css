@@ -212,7 +212,6 @@ body {
   width: 100%;
   display: -webkit-box;
   -webkit-box-orient: horizontal;
-  padding-top: 30px;
 }
 #game .game_row {
   display: -webkit-box;
@@ -235,13 +234,23 @@ body {
   min-width: 120px;
   padding: 0 30px 0 30px;
 }
+#game #game_left .desc, #game #game_right .desc {
+  height: 60px;
+  line-height: 30px;
+  color: #333;
+  font-size: 15px;
+}
 #game #game_left .h_blue_button, #game #game_right .h_blue_button {
   margin-bottom: 60px;
+}
+#game #game_right .desc {
+  text-align: right;
 }
 #game #game_right .v_button {
   margin-left: 30px;
 }
 #game #game_board {
+  padding-top: 60px;
   -webkit-box-flex: 10;
   min-width: 360px;
   -webkit-box-orient: horizontal;

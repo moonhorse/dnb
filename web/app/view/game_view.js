@@ -40,10 +40,26 @@ GameView = Backbone.View.extend({
         board += "</div>";
       }
 
-      html = this.template({board : board});
+      var stepsRemaining = this.model.get('totStep') - this.model.get('step');
+
+      html = this.template({
+        board : board,
+        sessionNum: this.model.get('sessionNum'),
+        nback: this.model.get('nback'),
+        stepsRemaining: stepsRemaining
+      });
+
+      var letter = AUDIO_MAP[current.audio];
+
+      setTimeout(function() {
+        var audio = $('#game_audio')[0];
+        audio.src = "http://www.elearnenglishlanguage.com/sounds/" + letter + ".wav";
+        audio.play();
+      }, 10);
     }
 
     $(this.el).html(html);
+
     return this;
   },
 

@@ -6,17 +6,31 @@ HistoryView = Backbone.View.extend({
 
   template: _.template(TPL_HISTORY),
 
+  initialize: function() {
+    this.model.bind('all', this.update, this);
+  },
+
   render: function() {
     var html;
     html = this.template();
     $(this.el).html(html);
 
-    var _this = this;
-    setTimeout(function() {
-      $.jqplot('history_chart', _this.model.get('data')); }, 100);
     return this;
   },
 
-  refresh: function() {
+  update: function() {
+    var viewModel = [];
+    for (var i = 0; i < this.model.length ; i ++) {
+      viewModel.push([
+        i, this.model.at(i).score || 100
+      ]);
+    }
+
+    var viewModelContainer = [];
+    viewModelContainer.push(viewModel);
+
+    setTimeout(function() {
+      $.jqplot('history_chart', viewModelContainer);
+    }, 100);
   }
 });

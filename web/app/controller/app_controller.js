@@ -21,7 +21,6 @@ DnbApp = {
     var views = this._initContentViews();
     this._initMainView(views);
     this._initRouter();
-
   },
 
   showGame: function(viewName) {
@@ -30,10 +29,11 @@ DnbApp = {
       case 'game':
         // Restart
         this.gameModel.newGame();
-        // this.gameModel.next();
+        this.gameModel.next();
         fullScreen = true;
         break;
       case 'history':
+        this.historyModel.fetch();
         fullScreen = true;
         break;
       default:
@@ -104,51 +104,4 @@ DnbApp = {
     var dnbRouter = new DnbRouter({app: this});
     Backbone.history.start();
   }
-
-/*
-  showMenu: function() {
-    this._hideAll();
-    this.menuView.render();
-    this._showOne(this.menuView);
-  },
-
-  showGame: function() {
-    this._hideAll();
-    this.gameModel.newGame();
-    this.gameView.render();
-
-    this.gameModel.next();
-    this._showOne(this.gameView);
-  },
-
-  showHistory: function() {
-    this._hideAll();
-    this._showOne(this.historyView);
-  },
-
-  showTutorial: function() {
-    this._hideAll();
-    this._showOne(this.tutorialView);
-  },
-
-  showFriends: function() {
-    this._hideAll();
-    this._showOne(this.friendsView);
-  },
-
-  _hideAll: function() {
-    this._hideOne(this.menuView);
-    this._hideOne(this.gameView);
-    this._hideOne(this.tutorialView);
-    this._hideOne(this.historyView);
-    this._hideOne(this.friendsView);
-  },
-
-  _hideOne: function(view) {
-    $(view.el).hide();
-  },
-
-  _showOne: function(view) {
-    $(view.el).show();
-  }*/
 };
