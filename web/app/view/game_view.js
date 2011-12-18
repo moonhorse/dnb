@@ -1,6 +1,7 @@
 dojo.provide('view.game_view');
 dojo.require('model.game_model');
 dojo.require('view.templates');
+dojo.require('view.game_continue_view');
 
 GameView = Backbone.View.extend({
   id: 'game',
@@ -20,11 +21,14 @@ GameView = Backbone.View.extend({
   },
 
   render: function() {
-    var html;
-
     if (this.model.get('finished')) {
-      html = "You have just finished a game! " + dojo.toJson(this.model.get('history'));
+      var gameContinueView = new GameContinueView({
+        model: this.model
+      });
+
+      $(this.el).append(gameContinueView.render().el);
     } else {
+      var html;
       var board = "";
       var current = this.model.get('current');
       for (var i = 0; i < SQUARE_ROW_NUMBER; i ++) {
@@ -56,9 +60,9 @@ GameView = Backbone.View.extend({
         audio.src = "http://www.elearnenglishlanguage.com/sounds/" + letter + ".wav";
         audio.play();
       }, 10);
-    }
 
-    $(this.el).html(html);
+      $(this.el).html(html);
+    }
 
     return this;
   },

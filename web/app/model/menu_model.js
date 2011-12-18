@@ -4,16 +4,12 @@ MenuModel = Backbone.Model.extend({
   defaults: {
     items: [
       {
-        display: 'New Game',
+        display: 'Play',
         nav: 'newGame'
       },
       {
         display: 'Tutorial',
         nav: 'tutorial'
-      },
-      {
-        display: 'Training',
-        nav: 'training'
       },
       {
         display: 'History',

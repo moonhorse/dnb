@@ -17,13 +17,28 @@ TPL_GAME = '<div id="game_left">' +
            '<div id="game_board"><%= board %></div>' + 
            '<div id="game_right">' +
              '<div class="desc">' +
-                '<div> Daily Session <%= sessionNum %> / 20</div>' +
+                '<div> Daily Session <%= sessionNum %>/20</div>' +
                 '<div> <%= stepsRemaining %> remaining</div>' +
              '</div>' +
              '<div id="exit_button" class="h_blue_button">Exit</div>' +
              '<div id="square_button" class="v_button">S</div>' +
            '</div>' +
            '<audio id="game_audio"></audio>';
+
+TPL_GAME_CONTINUE =
+             '<div class="box">' +
+               '<div class="info_title">Congratulations</div>' +
+
+               '<div class="info"><span>Result:   Audio </span><span class="text_hl"><%= totCorrectAudio %><span class="text">/</span><%= totAudio%></span><span> Position </span><span class="text_hl"><%= totCorrectSquare %><span class="text">/</span><%= totSquare%></span></div>' +
+               '<div class="info">Score: <span class="text_hl"> <%= score %>.</div>' +
+               '<div class="info"><%= nbackChange %></div>' +
+               '<div class="button">' +
+                 '<div id="modal_new_game" class="h_s_button">New</div>' +
+                 '<div id="modal_cancel" class="h_s_button">Cancel</div>' +
+               '</div>' +
+             '</div>' +
+             '<div class="shield"><div>';
+
 
 TPL_FRIENDS = '<div id="rank_desc" class="text">' +
                 'Friends are working hard on their IQ! You rank <span id="rank"> </span> among your friends!' +

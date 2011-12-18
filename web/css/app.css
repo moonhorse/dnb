@@ -212,6 +212,7 @@ body {
   width: 100%;
   display: -webkit-box;
   -webkit-box-orient: horizontal;
+  position: relative;
 }
 #game .game_row {
   display: -webkit-box;
@@ -254,6 +255,61 @@ body {
   -webkit-box-flex: 10;
   min-width: 360px;
   -webkit-box-orient: horizontal;
+}
+#game #game_continue {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+#game #game_continue .box {
+  -webkit-border-radius: 10px;
+  border: 1px solid #9A9A9A;
+  width: 302px;
+  margin: 90px auto;
+  z-index: 200;
+  position: relative;
+  background-color: #FFF;
+  padding: 30px 0px;
+}
+#game #game_continue .box .info_title {
+  text-align: center;
+  text-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  font-weight: bold;
+  font-size: 40px;
+  color: #333;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+#game #game_continue .box .info {
+  font-size: 19px;
+  color: #666666;
+  font-weight: bold;
+  line-height: 30px;
+  width: 240px;
+  margin: 0px auto;
+}
+#game #game_continue .box .button {
+  width: 300px;
+  margin: 30px auto;
+}
+#game #game_continue .box .button .h_s_button {
+  line-height: 30px;
+  display: inline-block;
+  margin-left: 19px;
+}
+#game #game_continue .shield {
+  background-color: #000;
+  opacity: 0.2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
 }
 #friends {
   text-align: center;

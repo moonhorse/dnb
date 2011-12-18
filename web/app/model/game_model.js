@@ -48,7 +48,7 @@ GameModel = Backbone.Model.extend({
     model.current = {};
     model.result = {};
 
-    var nback = localStorage.getItem('nback');
+    var nback = parseInt(localStorage.getItem('nback'), 10);
     // If nback is not set, set it to 2
     if (!nback) {
       nback = 2;
@@ -74,8 +74,18 @@ GameModel = Backbone.Model.extend({
     }
 
     var step = this.get('step') + 1;
-    var finished = step > this.get('totStep'); 
-    this.set({current : current, step : step, finished:finished});
+    var finished = step > this.get('totStep');
+
+    // If already finished, make it slient here because
+    // we do not want the step that is hitting the number
+    // limit to be trigger a view update.
+    //
+    // Later, we will call finish. Thats when we actually
+    // update the view with the lastest score and
+    // everything.
+    this.set({current : current, step : step}, {
+      silent: finished
+    });
 
     this.get('record').push(current);
 
@@ -88,6 +98,8 @@ GameModel = Backbone.Model.extend({
       // Caculate the score
       this.caculateScore();
       Session.incSessionNum();
+
+      this.set({finished: finished});
       this.save();
     }
   },
@@ -146,15 +158,19 @@ GameModel = Backbone.Model.extend({
       score = nback + (totCorrectAudio + totCorrectSquare) / (totAudio + totSquare);
     }
 
-    this.set({score : score, result : result});
+    var change = 0;
 
     // Dynamically adapt the nback number
     if (score > 0.8 + nback) {
       localStorage.setItem('nback', nback + 1);
+      change = 1;
     }
 
     if (score < 0.5 + nback && nback > 1) {
       localStorage.setItem('nback', nback - 1);
+      change = -1;
     }
+
+    this.set({score : score, result : result, change : change}, {silent: true});
   }
 });
