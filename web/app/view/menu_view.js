@@ -6,6 +6,12 @@ MenuView = Backbone.View.extend({
   id: 'menu',
 
   textTemplate: _.template(TPL_TEXT),
+  notconnectTemplate: _.template(TPL_NOTCONNECT),
+  connectedTemplate: _.template(TPL_CONNECTED),
+
+  events: {
+    "click #menu_notconnect"  : "_onConnect"
+  },
 
   render: function() {
     var items = this.model.get('items');
@@ -22,6 +28,15 @@ MenuView = Backbone.View.extend({
     }
 
     $(this.el).append(panel);
+    $(this.el).append(this.notconnectTemplate({}));
+    $(this.el).append(this.connectedTemplate({}));
+
     return this;
+  },
+
+  _onConnect: function() {
+    FB.login(function(response) { }, {
+      scope: 'email'
+    });
   }
 });

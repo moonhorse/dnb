@@ -13,7 +13,8 @@ GameView = Backbone.View.extend({
     "click #audio_button"  : "_onAudio",
     "click #square_button"  : "_onSquare",
     "click #restart_button"  : "_onRestart",
-    "click #exit_button"  : "_onExit"
+    "click #exit_button"  : "_onExit",
+    "click #share_button" : "_onShare"
   },
 
   initialize: function() {
@@ -83,5 +84,15 @@ GameView = Backbone.View.extend({
 
   _onExit: function() {
     Backbone.history.navigate('', true);
-  }
+  },
+
+  _onShare: function() {
+    FB.ui({
+      method: 'feed',
+      name: 'I am playing Dual N Back!'
+    }, 
+    function(response) {
+      console.log('publishStory response: ', response);
+    });
+    }
 });

@@ -22,7 +22,7 @@ HistoryView = Backbone.View.extend({
     var viewModel = [];
     for (var i = 0; i < this.model.length ; i ++) {
       viewModel.push([
-        i, this.model.at(i).score || 100
+        i, this.model.at(i).get('score') || 100
       ]);
     }
 

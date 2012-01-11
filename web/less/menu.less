@@ -9,5 +9,44 @@
       margin-bottom: @grid;
     }
   }
+
+  #menu_notconnect {
+    .text;
+    line-height: @grid * 1.5;
+
+    padding: 0px @grid * 2;
+
+    .connect_button {
+      background: url('../images/connect.jpeg') no-repeat 50% 50%;
+      height: 24px;
+      width: 190px;
+      display: inline-block;
+      position: relative;
+      top: 5px;
+    }
+  }
+
+  #menu_connected {
+    .text;
+    line-height: @grid * 2;
+
+    padding: 0px @grid * 2;
+  }
 }
 
+
+body.not_connected #menu_notconnect {
+  display: block;
+}
+
+body.not_connected #menu_connected {
+  display: none;
+}
+
+body.connected #menu_notconnect {
+  display: none;
+}
+
+body.connected #menu_connected {
+  display: block;
+}

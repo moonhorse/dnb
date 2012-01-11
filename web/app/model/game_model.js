@@ -18,7 +18,7 @@ GameModel = Backbone.Model.extend({
     // Current step
     step: 0,
     // Total number of stesp
-    totStep: 2,
+    totStep: 1,
     // The current nback
     nback: 2,
     // Not used now, specify if there is only one signal

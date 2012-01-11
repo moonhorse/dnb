@@ -70,12 +70,13 @@
     .box {
       .round_corner;
 
-      width: @grid * 10 + 2;
-      margin: @grid * 3 auto;
+      width: @grid * 12 + 2;
+      height: @grid * 12;
+      margin: @grid * 2 auto;
       z-index: 200;
       position: relative;
       background-color: #FFF;
-      padding: @grid 0px;
+      padding: 0px;
 
       .info_title {
         .large_title;
@@ -83,13 +84,14 @@
         font-size: @grid;
         text-align: center;
         margin-bottom: @grid;
+        margin-top: @grid;
       }
 
       .info {
         .text;
 
         line-height: @grid;
-        width: @grid * 8;
+        width: @grid * 10;
         margin: 0px auto;
       }
 
@@ -102,6 +104,13 @@
           display: inline-block;
           margin-left: @grid / 2 + 4;
         }
+      }
+
+      #share_button {
+        background: url('../images/share.jpeg') no-repeat 50% 50%;
+        width: 118px;
+        height: 40px;
+        margin: 0px auto;
       }
     }
 

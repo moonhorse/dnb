@@ -36,6 +36,7 @@ TPL_GAME_CONTINUE =
                  '<div id="modal_new_game" class="h_s_button">New</div>' +
                  '<div id="modal_cancel" class="h_s_button">Cancel</div>' +
                '</div>' +
+               '<div id="share_button"></div>' +
              '</div>' +
              '<div class="shield"><div>';
 
@@ -69,6 +70,17 @@ TPL_TUTORIAL =
   '<div class = "text"> Dual n back is a classical brain training game. One session contains a certain number of steps. In each step, you are exposed to an audio signal (a letter), and a spacial signal (the position of a square on a 3 by 3 grid), and you need to specify if the audio signal and spacial signal are the same as those n steps back.</div>' +
   '<div class = "text"> Following shows a dual 1 back game.</div>' + 
   '<img id="tutorial_one_back" src="./images/tutorial.png"></img>';
+
+TPL_NOTCONNECT =
+  '<div id="menu_notconnect">' +
+    '<span class="connect_button"></span>' +
+    '<span> to play with friends! </span>' +
+  '</div>';
+
+TPL_CONNECTED =
+  '<div id="menu_connected">' +
+    'You have connected to Facebook' +
+  '</div>';
 
 TPL_SETTINGS = '<div id="setting_nback">' +
                  '<div class="setting_text">Start # of n Back</div>' +

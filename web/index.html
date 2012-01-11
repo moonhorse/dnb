@@ -17,16 +17,14 @@
     <!-- FB init -->
     <div id="fb-root"></div>
     <script>
+      document.body.className = 'not_connected';
+
       function handleStatusChange(response) {
         document.body.className = response.authResponse ? 'connected' : 'not_connected';
 
         if (response.authResponse) {
           console.log(response);
         }
-      }
-
-      function loginUser() {
-        FB.login(function(response) { }, {});
       }
 
       window.fbAsyncInit = function() {
@@ -55,7 +53,5 @@
     <div id="logout">
       <p><button  onClick="FB.logout();">Logout</button></p>
     </div>
-
-    <div id="chartdiv" style="height:400px;width:300px; "></div>
   </body>
 </html>

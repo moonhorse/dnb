@@ -208,6 +208,40 @@ body {
 #menu #menu_panel .h_button {
   margin-bottom: 30px;
 }
+#menu #menu_notconnect {
+  font-size: 19px;
+  color: #666666;
+  font-weight: bold;
+  line-height: 45px;
+  padding: 0px 60px;
+}
+#menu #menu_notconnect .connect_button {
+  background: url('../images/connect.jpeg') no-repeat 50% 50%;
+  height: 24px;
+  width: 190px;
+  display: inline-block;
+  position: relative;
+  top: 5px;
+}
+#menu #menu_connected {
+  font-size: 19px;
+  color: #666666;
+  font-weight: bold;
+  line-height: 60px;
+  padding: 0px 60px;
+}
+body.not_connected #menu_notconnect {
+  display: block;
+}
+body.not_connected #menu_connected {
+  display: none;
+}
+body.connected #menu_notconnect {
+  display: none;
+}
+body.connected #menu_connected {
+  display: block;
+}
 #game {
   width: 100%;
   display: -webkit-box;
@@ -266,12 +300,13 @@ body {
 #game #game_continue .box {
   -webkit-border-radius: 10px;
   border: 1px solid #9A9A9A;
-  width: 302px;
-  margin: 90px auto;
+  width: 362px;
+  height: 360px;
+  margin: 60px auto;
   z-index: 200;
   position: relative;
   background-color: #FFF;
-  padding: 30px 0px;
+  padding: 0px;
 }
 #game #game_continue .box .info_title {
   text-align: center;
@@ -283,13 +318,14 @@ body {
   font-size: 30px;
   text-align: center;
   margin-bottom: 30px;
+  margin-top: 30px;
 }
 #game #game_continue .box .info {
   font-size: 19px;
   color: #666666;
   font-weight: bold;
   line-height: 30px;
-  width: 240px;
+  width: 300px;
   margin: 0px auto;
 }
 #game #game_continue .box .button {
@@ -300,6 +336,12 @@ body {
   line-height: 30px;
   display: inline-block;
   margin-left: 19px;
+}
+#game #game_continue .box #share_button {
+  background: url('../images/share.jpeg') no-repeat 50% 50%;
+  width: 118px;
+  height: 40px;
+  margin: 0px auto;
 }
 #game #game_continue .shield {
   background-color: #000;

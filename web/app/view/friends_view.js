@@ -9,6 +9,10 @@ FriendsView = Backbone.View.extend({
 
   rowTemplate: _.template(TPL_LEADERBOARD_ROW),
 
+  events: {
+    "click #invite_button"  : "_onInvite"
+  },
+
   render: function() {
     $(this.el).html(this.template());
 
@@ -36,6 +40,16 @@ FriendsView = Backbone.View.extend({
 
     $('#leader_board').html(leaderBoard);
     $('#rank').html(this.model.get('rank'));
+  },
+
+  _onInvite: function() {
+    FB.ui({
+      method: 'apprequests',
+      message: 'invite you to play Dual N Back to scientifically improve your IQ!'
+    }, 
+    function(response) {
+      console.log('sendRequest response: ', response);
+    });
   }
 });
 
