@@ -24,26 +24,38 @@ DnbRouter = Backbone.Router.extend({
 
   game: function() {
     this.app.showGame('menu');
+    this.hideUrlBar(); 
   },
 
   game_NewGame: function() {
     this.app.showGame('game');
+    this.hideUrlBar(); 
   },
 
   game_History: function() {
     this.app.showGame('history');
+    this.hideUrlBar(); 
   },
 
   game_Tutorial: function() {
     this.app.showGame('tutorial');
+    this.hideUrlBar(); 
   },
 
   friends: function() {
     this.app.showFriends();
+    this.hideUrlBar(); 
   },
 
   settings: function() {
     this.app.showSettings();
+    this.hideUrlBar(); 
+  },
+
+  hideUrlBar: function() {
+    setTimeout(function() {
+      window.scrollTo(0, 1);
+    }, 100);
   }
 
 /*
