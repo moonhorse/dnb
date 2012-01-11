@@ -9,22 +9,22 @@
   text-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
   color: #FFF;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 30px;
 }
 .small_title {
   text-align: center;
   text-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
   color: #FFF;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 20px;
 }
 .text {
-  font-size: 19px;
+  font-size: 14px;
   color: #666666;
   font-weight: bold;
 }
 .text_hl {
-  font-size: 19px;
+  font-size: 14px;
   color: #666666;
   font-weight: bold;
   color: 009CC9;
@@ -51,7 +51,7 @@
   text-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
   color: #FFF;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 30px;
   -webkit-border-radius: 10px;
   border: 1px solid #9A9A9A;
 }
@@ -61,12 +61,12 @@
   text-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
   color: #FFF;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 30px;
   -webkit-border-radius: 10px;
   border: 1px solid #9A9A9A;
-  width: 300px;
-  height: 60px;
-  line-height: 60px;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
 }
 .h_button:active {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e3a74e), to(#e3a74e), color-stop(0.6, #bd7a16));
@@ -77,12 +77,12 @@
   text-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
   color: #FFF;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 20px;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffbc58), to(#ffbc58), color-stop(0.5, #ffa51e));
   -webkit-border-radius: 10px;
   border: 1px solid #9A9A9A;
-  height: 30px;
-  width: 120px;
+  height: 20px;
+  width: 80px;
 }
 .h_s_button:active {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e3a74e), to(#e3a74e), color-stop(0.6, #bd7a16));
@@ -93,12 +93,12 @@
   text-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
   color: #FFF;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 30px;
   -webkit-border-radius: 10px;
   border: 1px solid #9A9A9A;
-  width: 90px;
-  height: 300px;
-  line-height: 300px;
+  width: 60px;
+  height: 200px;
+  line-height: 200px;
   background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#ffbc58), to(#ffbc58), color-stop(0.5, #ffa51e));
 }
 .v_button:active {
@@ -106,9 +106,9 @@
   color: #DDDDDD;
 }
 .h_blue_button {
-  width: 120px;
-  height: 60px;
-  line-height: 60px;
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
   font-weight: bold;
   color: #009CC9;
@@ -121,8 +121,8 @@
 }
 .bar {
   -webkit-box-flex: 1;
-  max-height: 90px;
-  min-height: 90px;
+  max-height: 60px;
+  min-height: 60px;
   width: 100%;
 }
 body {
@@ -135,18 +135,18 @@ body {
 }
 #main #top_bar {
   -webkit-box-flex: 1;
-  max-height: 90px;
-  min-height: 90px;
+  max-height: 60px;
+  min-height: 60px;
   width: 100%;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#01ccff), to(#01ccff), color-stop(0.5, #0099cc));
 }
 #main #top_bar #title {
-  line-height: 90px;
+  line-height: 60px;
   text-align: center;
   text-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
   color: #FFF;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 30px;
 }
 #main #content {
   -webkit-box-flex: 10;
@@ -154,8 +154,8 @@ body {
 }
 #main #bottom_nav {
   -webkit-box-flex: 1;
-  max-height: 90px;
-  min-height: 90px;
+  max-height: 60px;
+  min-height: 60px;
   width: 100%;
   display: -webkit-box;
   -webkit-box-orient: horizontal;
@@ -164,10 +164,10 @@ body {
 #main #bottom_nav > div {
   -webkit-box-flex: 1;
   background-repeat: no-repeat;
-  background-position: center 9px;
-  background-size: 45px 45px;
+  background-position: center 6px;
+  background-size: 30px 30px;
   color: #999999;
-  padding: 60px 0px 0px 36px;
+  padding: 40px 0px 0px 24px;
   position: relative;
 }
 #main #bottom_nav > div.highlight .shield {
@@ -193,27 +193,27 @@ body {
   opacity: 0.2;
   display: none;
   position: absolute;
-  top: 7.5px;
-  left: 22.5px;
-  width: 75px;
-  height: 75px;
+  top: 5px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
   -webkit-border-radius: 5px;
 }
 #menu #menu_improve {
-  padding: 30px 60px 60px 60px;
+  padding: 20px 40px 40px 40px;
 }
 #menu #menu_panel {
-  margin-left: 90px;
+  margin-left: 60px;
 }
 #menu #menu_panel .h_button {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 #menu #menu_notconnect {
-  font-size: 19px;
+  font-size: 14px;
   color: #666666;
   font-weight: bold;
-  line-height: 45px;
-  padding: 0px 60px;
+  line-height: 30px;
+  padding: 0px 40px;
 }
 #menu #menu_notconnect .connect_button {
   background: url('../images/connect.jpeg') no-repeat 50% 50%;
@@ -224,11 +224,11 @@ body {
   top: 5px;
 }
 #menu #menu_connected {
-  font-size: 19px;
+  font-size: 14px;
   color: #666666;
   font-weight: bold;
-  line-height: 60px;
-  padding: 0px 60px;
+  line-height: 40px;
+  padding: 0px 40px;
 }
 body.not_connected #menu_notconnect {
   display: block;
@@ -251,13 +251,13 @@ body.connected #menu_connected {
 #game .game_row {
   display: -webkit-box;
   -webkit-box-orient: horizontal;
-  max-height: 120px;
-  height: 120px;
+  max-height: 80px;
+  height: 80px;
 }
 #game .game_row .game_col {
   -webkit-box-flex: 1;
-  max-width: 120px;
-  width: 120px;
+  max-width: 80px;
+  width: 80px;
   border: 1px solid black;
   background-color: white;
 }
@@ -266,28 +266,28 @@ body.connected #menu_connected {
 }
 #game #game_left, #game #game_right {
   -webkit-box-flex: 1;
-  min-width: 120px;
-  padding: 0 30px 0 30px;
+  min-width: 80px;
+  padding: 0 20px 0 20px;
 }
 #game #game_left .desc, #game #game_right .desc {
-  height: 60px;
-  line-height: 30px;
+  height: 40px;
+  line-height: 20px;
   color: #333;
-  font-size: 15px;
+  font-size: 10px;
 }
 #game #game_left .h_blue_button, #game #game_right .h_blue_button {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 #game #game_right .desc {
   text-align: right;
 }
 #game #game_right .v_button {
-  margin-left: 30px;
+  margin-left: 20px;
 }
 #game #game_board {
-  padding-top: 60px;
+  padding-top: 40px;
   -webkit-box-flex: 10;
-  min-width: 360px;
+  min-width: 240px;
   -webkit-box-orient: horizontal;
 }
 #game #game_continue {
@@ -300,9 +300,9 @@ body.connected #menu_connected {
 #game #game_continue .box {
   -webkit-border-radius: 10px;
   border: 1px solid #9A9A9A;
-  width: 362px;
-  height: 360px;
-  margin: 60px auto;
+  width: 242px;
+  height: 240px;
+  margin: 40px auto;
   z-index: 200;
   position: relative;
   background-color: #FFF;
@@ -313,29 +313,29 @@ body.connected #menu_connected {
   text-shadow: 0 3px 3px rgba(0, 0, 0, 0.5);
   color: #FFF;
   font-weight: bold;
-  font-size: 40px;
-  color: #333;
   font-size: 30px;
+  color: #333;
+  font-size: 20px;
   text-align: center;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 #game #game_continue .box .info {
-  font-size: 19px;
+  font-size: 14px;
   color: #666666;
   font-weight: bold;
-  line-height: 30px;
-  width: 300px;
+  line-height: 20px;
+  width: 200px;
   margin: 0px auto;
 }
 #game #game_continue .box .button {
-  width: 300px;
-  margin: 30px auto;
+  width: 200px;
+  margin: 20px auto;
 }
 #game #game_continue .box .button .h_s_button {
-  line-height: 30px;
+  line-height: 20px;
   display: inline-block;
-  margin-left: 19px;
+  margin-left: 14px;
 }
 #game #game_continue .box #share_button {
   background: url('../images/share.jpeg') no-repeat 50% 50%;
@@ -355,10 +355,10 @@ body.connected #menu_connected {
 }
 #friends {
   text-align: center;
-  padding: 30px;
+  padding: 20px;
 }
 #friends #rank_desc {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 #friends #leader_board {
   width: 100%;
@@ -366,43 +366,43 @@ body.connected #menu_connected {
 #friends #leader_board .leader_row {
   display: -webkit-box;
   -webkit-box-orient: horizontal;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 #friends #leader_board .leader_row .thumbnail_container {
   -webkit-box-flex: 1;
-  min-width: 120px;
-  max-width: 120px;
+  min-width: 80px;
+  max-width: 80px;
 }
 #friends #leader_board .leader_row .thumbnail_container  > div {
   margin-left: auto;
   margin-right: auto;
 }
 #friends #leader_board .leader_row .thumbnail_container .thumbnail {
-  background-size: 60px 60px;
+  background-size: 40px 40px;
   background-repeat: no-repeat;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
 }
 #friends #leader_board .leader_row .thumbnail_container .name {
-  height: 30px;
-  line-height: 30px;
+  height: 20px;
+  line-height: 20px;
 }
 #friends #leader_board .leader_row .score {
   -webkit-box-flex: 4;
   font-weight: bold;
-  font-size: 45px;
+  font-size: 30px;
   color: #000;
   position: relative;
-  top: 7.5px;
+  top: 5px;
 }
 #friends #leader_board .leader_row .challenge {
-  font-size: 19px;
+  font-size: 14px;
   -webkit-box-flex: 1;
   position: relative;
-  top: 15px;
+  top: 10px;
 }
 #friends #invite_button {
-  margin: 30px auto;
+  margin: 20px auto;
 }
 .gray_boarder {
   border-width: 1px;
@@ -420,12 +420,12 @@ body.connected #menu_connected {
   font-size: 48px;
 }
 #history #history_chart {
-  width: 480px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  width: 320px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 #history #date_button {
-  width: 360px;
+  width: 240px;
   display: -webkit-box;
   -webkit-box-orient: horizontal;
   text-align: center;
@@ -433,8 +433,8 @@ body.connected #menu_connected {
 #history #date_button  > div {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffbc58), to(#ffbc58), color-stop(0.5, #ffa51e));
   -webkit-box-flex: 1;
-  height: 60px;
-  line-height: 60px;
+  height: 40px;
+  line-height: 40px;
   font-size: 24px;
   font-weight: bold;
   color: #999;
@@ -461,14 +461,14 @@ body.connected #menu_connected {
 }
 #settings {
   width: 100%;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 #settings  > div {
-  margin: 30px 60px;
+  margin: 20px 40px;
   -webkit-box-orient: horizontal;
   display: -webkit-box;
-  line-height: 30px;
-  font-size: 19px;
+  line-height: 20px;
+  font-size: 14px;
   font-weight: bold;
 }
 #settings  > div .setting_text {
@@ -479,32 +479,32 @@ body.connected #menu_connected {
 #settings  > div .setting_op {
   -webkit-box-flex: 1;
   display: -webkit-box;
-  min-width: 120px;
-  max-width: 120px;
+  min-width: 80px;
+  max-width: 80px;
   text-align: center;
 }
 #settings #setting_nback .setting_op  > span {
   display: block;
-  height: 30px;
+  height: 20px;
 }
 #settings #setting_nback .setting_op .left {
   background: url('../images/tri-left.png') no-repeat 50% 50%;
-  background-size: 30px;
-  width: 30px;
+  background-size: 20px;
+  width: 20px;
 }
 #settings #setting_nback .setting_op #setting_nback_num {
-  width: 60px;
+  width: 40px;
 }
 #settings #setting_nback .setting_op .right {
   background: url('../images/tri-right.png') no-repeat 50% 50%;
-  background-size: 30px;
-  width: 30px;
+  background-size: 20px;
+  width: 20px;
 }
 #settings #setting_speed .setting_op  > span {
   -webkit-border-radius: 3px;
   border: 1px solid #9A9A9A;
-  height: 30px;
-  width: 60px;
+  height: 20px;
+  width: 40px;
   display: block;
   position: relative;
   z-index: 0;
@@ -518,11 +518,11 @@ body.connected #menu_connected {
   left: -5px;
 }
 #tutorial {
-  padding: 30px;
+  padding: 20px;
 }
 #tutorial #tutorial_one_back {
   width: 100%;
 }
 #tutorial  > div {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
