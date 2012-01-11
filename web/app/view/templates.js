@@ -65,6 +65,11 @@ TPL_HISTORY = '<div id="title" class="text">' +
                 '<div class="right"> 3 months</div>' +
               '</div>';
 
+TPL_TUTORIAL =
+  '<div class = "text"> Dual n back is a classical brain training game. One session contains a certain number of steps. In each step, you are exposed to an audio signal (a letter), and a spacial signal (the position of a square on a 3 by 3 grid), and you need to specify if the audio signal and spacial signal are the same as those n steps back.</div>' +
+  '<div class = "text"> Following shows a dual 1 back game.</div>' + 
+  '<img id="tutorial_one_back" src="./images/tutorial.png"></img>';
+
 TPL_SETTINGS = '<div id="setting_nback">' +
                  '<div class="setting_text">Start # of n Back</div>' +
                  '<div class="setting_op">' +

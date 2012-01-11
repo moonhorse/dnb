@@ -475,3 +475,12 @@ body {
   position: relative;
   left: -5px;
 }
+#tutorial {
+  padding: 30px;
+}
+#tutorial #tutorial_one_back {
+  width: 100%;
+}
+#tutorial  > div {
+  margin-bottom: 30px;
+}
